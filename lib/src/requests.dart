@@ -5,7 +5,7 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart' as io_client;
-import 'package:logging/logging.dart';
+//import 'package:logging/logging.dart';
 
 import 'common.dart';
 import 'event.dart';
@@ -13,7 +13,7 @@ import 'event.dart';
 enum RequestBodyEncoding { JSON, FormURLEncoded, PlainText }
 enum HttpMethod { GET, PUT, PATCH, POST, DELETE, HEAD }
 
-final Logger log = Logger('requests');
+//final Logger log = Logger('requests');
 
 class Response {
   final http.Response _rawResponse;
@@ -118,8 +118,8 @@ class Requests {
         return Map.from(cookies);
       }
     } catch (e) {
-      log.shout(
-          'problem reading stored cookies. fallback with empty cookies $e');
+      //log.shout(
+      //    'problem reading stored cookies. fallback with empty cookies $e');
     }
     return <String, String>{};
   }
